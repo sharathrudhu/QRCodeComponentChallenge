@@ -1,16 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+:root {
+  --bg-color: #d5e1ef;
+  --primary-color: #1F314F;
+  --secondary-color: #68778D;
+  --font-family: 'Outfit', sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color: #d5e1ef;
+  background-color: var(--bg-color);
+  font-family: var(--font-family);
 }
 
-.attribution {
-  font-size: 11px;
+footer {
   width: 100%;
   text-align: center;
   position: fixed;
@@ -21,14 +28,15 @@ body {
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
+  font-size: 0.875rem;
 }
 
-.attribution a {
+.footer a {
   color: hsl(228, 45%, 44%);
 }
 
-.container {
-  width: 1440px;
+main {
+  width: 90rem;
   height: calc(100vh - 32px);
   margin: 0 auto;
 
@@ -37,9 +45,9 @@ body {
   align-items: center;
 }
 
-.qr-container {
-  width: 320px;
-  height: 499px;
+section {
+  width: 20rem;
+  height: 31.25rem;
   background-color: #FFFFFF;
   border-radius: 20px;
 
@@ -57,8 +65,8 @@ body {
 }
 
 .qr-text {
-  width: 288px;
-  height: 131px;
+  width: 18rem;
+  height: 8.25rem;
 
   display: flex;
   flex-direction: column;
@@ -66,38 +74,28 @@ body {
   align-items: center;
 }
 
-.qr-text p {
-  width: 256px;
+.qr-text h1 {
+  width: 16rem;
   text-align: center;
-  font-family: "Outfit", sans-serif;
-  font-weight: bold;
-  font-size: 22px;
-  color: #1F314F;
+  font-size: 1.375rem;
+  color: var(--primary-color);
 }
 
-.qr-text span {
-  width: 256px;
+.qr-text p {
+  width: 16rem;
   text-align: center;
-  font-family: "Outfit", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  color: #68778D;
+  font-size: 1rem;
+  color: var(--secondary-color);
 }
 
 @media only screen and (max-width: 375px) {
-  .attribution {
+  .footer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 
-  .attribution span{
-    width: 320px;
-  }
-
-  .container {
-    width: 375px;
+  main {
+    width: 23.5rem;
     height: calc(100vh - 68px);
     margin: 0 auto;
 
